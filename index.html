@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koperasi Nan Sarunai • Ekonomi Rakyat</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-coins"></i>
+                <span>Koperasi Nan Sarunai</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#statistik">Statistik</a></li>
+                <li><a href="#harga">Harga</a></li>
+                <li><a href="#iuran">Iuran</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hero-title">Koperasi <span>Nan Sarunai</span></h1>
+            <p class="hero-subtitle">Gerakan Ekonomi Rakyat</p>
+            <div class="hero-stats" id="heroStats">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-number" id="totalAnggota">0</div>
+                    <div class="stat-label">Anggota Aktif</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-coins"></i>
+                    <div class="stat-number" id="stokToken">0</div>
+                    <div class="stat-label">Stok Token</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-gem"></i>
+                    <div class="stat-number" id="totalEmas">0</div>
+                    <div class="stat-label">Emas (gram)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG SECTION -->
+    <section id="tentang" class="about">
+        <div class="container">
+            <h2 class="section-title">Tentang Koperasi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Visi</h3>
+                    <p>Menjadi koperasi terdepan dalam pemberdayaan ekonomi rakyat berbasis emas, menciptakan masyarakat yang mandiri, sejahtera, dan berkeadilan.</p>
+                    
+                    <h3>Misi</h3>
+                    <ul class="mission-list">
+                        <li><i class="fas fa-check-circle"></i> Memberdayakan masyarakat melalui kepemilikan emas digital</li>
+                        <li><i class="fas fa-check-circle"></i> Melindungi nilai kekayaan dari inflasi</li>
+                        <li><i class="fas fa-check-circle"></i> Menciptakan ekosistem ekonomi mandiri</li>
+                        <li><i class="fas fa-check-circle"></i> Membangun koperasi yang transparan dan profesional</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <div class="stat-value" id="anggotaAktif">0</div>
+                        <div class="stat-desc">Anggota Aktif</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="stokTokenStat">0</div>
+                        <div class="stat-desc">Stok Token</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="emasFisik">0</div>
+                        <div class="stat-desc">Gram Emas</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="nilaiEmas">0</div>
+                        <div class="stat-desc">Nilai Emas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IURAN SECTION -->
+    <section id="iuran" class="iuran">
+        <div class="container">
+            <h2 class="section-title">Sistem Iuran</h2>
+            <p class="section-subtitle">Mudah, transparan, dan otomatis</p>
+            
+            <div class="iuran-cards">
+                <div class="iuran-card">
+                    <div class="iuran-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Iuran Awal</h3>
+                    <div class="iuran-value">Rp 12.000</div>
+                    <p>Deposit iuran untuk 1 tahun</p>
+                    <ul class="iuran-list">
+                        <li>✅ Langsung aktif 12 bulan</li>
+                        <li>✅ Bisa top up kapan saja</li>
+                        <li>✅ Otomatis potong Rp 1.000/bulan</li>
+                    </ul>
+                </div>
+                
+                <div class="iuran-card highlight">
+                    <div class="iuran-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Iuran Bulanan</h3>
+                    <div class="iuran-value">Rp 1.000</div>
+                    <p>Dipangkas otomatis dari deposit</p>
+                    <ul class="iuran-list">
+                        <li>✅ Setiap tanggal 1</li>
+                        <li>✅ Saldo iuran berkurang</li>
+                        <li>✅ Notifikasi jika hampir habis</li>
+                    </ul>
+                </div>
+                
+                <div class="iuran-card">
+                    <div class="iuran-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Status Non Aktif</h3>
+                    <div class="iuran-value">Saldo = 0</div>
+                    <p>Tidak bisa bertransaksi</p>
+                    <ul class="iuran-list">
+                        <li>⚠️ Beli token tidak bisa</li>
+                        <li>⚠️ Jual token tidak bisa</li>
+                        <li>⚠️ Transfer tidak bisa</li>
+                        <li>✅ Top up Rp 12.000 = aktif lagi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HARGA SECTION -->
+    <section id="harga" class="prices">
+        <div class="container">
+            <h2 class="section-title">Pergerakan Harga Real-time</h2>
+            <p class="section-subtitle">Update setiap 5 menit • Sumber: API Eksternal</p>
+            
+            <div class="price-cards">
+                <div class="price-card">
+                    <div class="price-header">
+                        <i class="fas fa-gem"></i>
+                        <h3>Harga Emas</h3>
+                    </div>
+                    <div class="price-value" id="hargaEmas">Rp 0</div>
+                    <div class="price-update" id="updateEmas">-</div>
+                </div>
+                <div class="price-card">
+                    <div class="price-header">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>Kurs USD/IDR</h3>
+                    </div>
+                    <div class="price-value" id="kursUSD">Rp 0</div>
+                    <div class="price-update" id="updateKurs">-</div>
+                </div>
+            </div>
+
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3><i class="fas fa-gem" style="color: #ffd700;"></i> Harga Emas</h3>
+                    <canvas id="emasChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3><i class="fas fa-dollar-sign" style="color: #3b82f6;"></i> Kurs USD/IDR</h3>
+                    <canvas id="kursChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARA BERGABUNG -->
+    <section class="join">
+        <div class="container">
+            <h2 class="section-title">Cara Bergabung</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Registrasi</h3>
+                    <p>Daftar sebagai user (gratis)</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-id-card"></i>
+                    <h3>Jadi Anggota</h3>
+                    <p>Bayar iuran awal Rp 12.000</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-coins"></i>
+                    <h3>Beli Token</h3>
+                    <p>Dapat token dari stok koperasi</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Nilai Naik</h3>
+                    <p>Token mengikuti harga emas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTIK LENGKAP -->
+    <section id="statistik" class="stats-full">
+        <div class="container">
+            <h2 class="section-title">Statistik Lengkap</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-detail">
+                        <span class="stat-label">Total User</span>
+                        <span class="stat-number" id="totalUser">0</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-id-card"></i></div>
+                    <div class="stat-detail">
+                        <span class="stat-label">Total Anggota</span>
+                        <span class="stat-number" id="totalAnggotaFull">0</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="stat-detail">
+                        <span class="stat-label">Anggota Aktif</span>
+                        <span class="stat-number" id="anggotaAktifFull">0</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-coins"></i></div>
+                    <div class="stat-detail">
+                        <span class="stat-label">Stok Token</span>
+                        <span class="stat-number" id="stokTokenFull">0</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-gem"></i></div>
+                    <div class="stat-detail">
+                        <span class="stat-label">Emas Fisik</span>
+                        <span class="stat-number" id="emasFisikFull">0</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <div class="stat-detail">
+                        <span class="stat-label">Total Iuran</span>
+                        <span class="stat-number" id="totalIuran">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="contact">
+        <div class="container">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Alamat</h4>
+                            <p>Jl. Sudirman No. 123, Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telepon</h4>
+                            <p>(021) 1234-5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@koperasi.id</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Koperasi Nan Sarunai. All rights reserved.</p>
+            <p>Harga emas dan kurs diperbarui setiap 5 menit • Grafik diperbarui setiap jam</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
