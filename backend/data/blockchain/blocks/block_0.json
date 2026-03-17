@@ -1,0 +1,14 @@
+{
+  "index": 0,
+  "timestamp": "2026-03-16 18:59:01.999749",
+  "transactions": [
+    {
+      "type": "genesis",
+      "data": "Koperasi Token Emas didirikan",
+      "timestamp": "2026-03-16 18:59:01.999787"
+    }
+  ],
+  "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "nonce": 0,
+  "hash": "c834d6e5aaf19a97010afd1801b379247a0f03eb5b4f6417888d3a8f8bdf536d"
+}

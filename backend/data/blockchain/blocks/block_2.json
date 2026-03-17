@@ -1,0 +1,17 @@
+{
+  "index": 2,
+  "timestamp": "2026-03-16 18:59:02.004426",
+  "transactions": [
+    {
+      "type": "qris",
+      "pembeli": 1,
+      "pedagang": 4,
+      "jumlah": 20000,
+      "timestamp": "2026-03-16 18:59:02.003864",
+      "status": "pending"
+    }
+  ],
+  "previous_hash": "0010b23d0b84cc02f835940bfec44298930729e82df011bea988f228dc45168d",
+  "nonce": 64,
+  "hash": "00a1c561c55b55ca75b3dc976b30e6ae23e89b621d795bb1a7bd1b854463cfa1"
+}
